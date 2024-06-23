@@ -1,0 +1,40 @@
+body {
+  background-color: antiquewhite;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+.inputs {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.input-container {
+    background-color: gold;
+    margin: 0 100px;
+    padding:30px;
+    border-radius: 5px;
+}
+.inputs input {
+    border: none;
+    height: 120%;
+    border-radius:10px
+}
+
+.add {
+    margin-top: 20px;
+}
+.add-btn {
+    background-color: royalblue;
+    border: none;
+    padding: 10px;
+    color: white;
+}
+
+.table {
+    background-color: gold;
+    border-radius: 10px;
+}
