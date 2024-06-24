@@ -1,8 +1,21 @@
 const nameInputElement = document.querySelector("#name");
 const phoneInputElement = document.querySelector("#phone");
 const addOrEditContactButton = document.querySelector(".add-contact-btn");
-const table = document.querySelector("#phone-book-table");
+
 const phoneNumberDetails = [];
+
+const table = document.querySelector("#phone-book-table");
+const rows = table.querySelectorAll("tr");
+console.log(rows);
+for (let i = 1; i < rows.length - 1; i++) {
+  phoneNumberDetails.push({
+    name: rows[i].querySelector("td:nth-child(1)").innerHTML,
+    phoneNumber: rows[i].querySelector("td:nth-child(2)").innerHTML,
+  });
+}
+
+console.log(table.querySelectorAll("tr"));
+
 const errorOutputParagraph = document.querySelector("#error-output");
 
 let tableRowToBeEdited = null;
@@ -91,6 +104,7 @@ function createTableHeader() {
   thead.appendChild(phoneNumberHeader);
   thead.appendChild(editHeader);
   thead.appendChild(deleteHeader);
+
   return thead;
 }
 
@@ -119,6 +133,13 @@ function handleTableActions(e) {
 function editContact() {
   const name = nameInputElement.value;
   const phoneNumber = phoneInputElement.value;
+
+  if (name.length < 3 || phoneNumber.length < 3) {
+    errorOutputParagraph.innerHTML =
+      "The name and phone number should contain at least 3 characters!";
+    errorOutputParagraph.style.color = "red";
+    return;
+  }
 
   tableRowToBeEdited.querySelector("td:nth-child(1)").innerHtml = name;
   tableRowToBeEdited.querySelector("td:nth-child(2)").innerHtml = phoneNumber;
