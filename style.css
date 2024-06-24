@@ -21,17 +21,18 @@ body {
 .inputs input {
   border: none;
   height: 120%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .add {
   margin-top: 20px;
 }
-#add-btn {
+.btn {
   background-color: royalblue;
   border: none;
-  padding: 10px;
+  padding: 10px 40px;
   color: white;
+  border-radius: 5px;
 }
 
 .table {
@@ -71,7 +72,7 @@ body {
     height: auto;
   }
 
-  #add-btn {
+  .btn {
     width: 100%;
   }
 }
