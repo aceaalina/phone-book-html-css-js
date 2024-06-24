@@ -7,27 +7,26 @@
   </head>
   <body>
     <div class="container">
-        <h1>&#9742; Phone Book</h1>
-        <div class="input-container">
-            <div class="inputs">
-                <div class="input-name">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name">
-                </div>
-                <div class="input-phone">
-                    <label for="phone">Phone:</label>
-                    <input type="text" id="phone">
-                </div>
-            </div>
-            <div class="add">
-                <button id="add-btn">Add contact</button>
-            </div>
+      <h1>&#9742; Phone Book</h1>
+      <div class="input-container">
+        <div class="inputs">
+          <div class="input-name">
+            <label for="name">Name:</label>
+            <input type="text" id="name" />
+          </div>
+          <div class="input-phone">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" />
+          </div>
         </div>
-        
-        <div class="table">
-            <table id="phone-book-table"></table>
+        <div class="add">
+          <button id="add-btn">Add contact</button>
         </div>
-
+      </div>
+      <p id="error-output"></p>
+      <div class="table">
+        <table id="phone-book-table"></table>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>

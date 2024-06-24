@@ -13,31 +13,65 @@ body {
   justify-content: center;
 }
 .input-container {
-    background-color: gold;
-    margin: 0 100px;
-    padding:30px;
-    border-radius: 5px;
+  background-color: gold;
+  margin: 0 100px;
+  padding: 30px;
+  border-radius: 5px;
 }
 .inputs input {
-    border: none;
-    height: 120%;
-    border-radius:10px;
+  border: none;
+  height: 120%;
+  border-radius: 10px;
 }
 
 .add {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 #add-btn {
-    background-color: royalblue;
-    border: none;
-    padding: 10px;
-    color: white;
+  background-color: royalblue;
+  border: none;
+  padding: 10px;
+  color: white;
 }
 
 .table {
-    background-color: gold;
-    margin: 0 100px;
-    padding:30px;
-    border-radius: 5px;
-    margin-top: 10px;
+  background-color: gold;
+  margin: 0 100px;
+  padding: 30px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .input-container,
+  .table {
+    margin: 0 50px;
+    padding: 20px;
+  }
+
+  .inputs {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .input-container,
+  .table {
+    margin: 0 20px;
+    padding: 15px;
+  }
+
+  .inputs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .inputs input {
+    width: 100%;
+    height: auto;
+  }
+
+  #add-btn {
+    width: 100%;
+  }
 }
