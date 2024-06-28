@@ -18,12 +18,19 @@ body {
   gap: 20px;
   justify-content: center;
 }
+
 .input-container {
   background-color: gold;
   margin: 0 100px;
   padding: 30px;
   border-radius: 5px;
 }
+
+label {
+  display: inline-block;
+  padding: 5px 10px;
+}
+
 .inputs input {
   border: none;
   height: 120%;
@@ -33,6 +40,7 @@ body {
 .add {
   margin-top: 20px;
 }
+
 .btn {
   background-color: royalblue;
   border: none;
@@ -49,14 +57,32 @@ body {
   border-radius: 5px;
   margin-top: 10px;
 }
+
 #phone-book-table {
-  border: 1px solid black;
+  padding: 10px 5px;
+  width: 100%;
 }
+
+thead,
+th {
+  padding: 10px 5px;
+}
+td {
+  text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
   .input-container,
   .table {
-    margin: 0 50px;
-    padding: 20px;
+    margin: 0 20px;
+    padding: 15px;
+    border-collapse: collapse;
+    border: 1px solid rgb(182, 178, 178);
+    border-radius: 5px;
   }
 
   .inputs {
@@ -65,11 +91,26 @@ body {
   }
 }
 
+.inputs input {
+  width: 100%;
+  height: auto;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+
 @media only screen and (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+
   .input-container,
   .table {
     margin: 0 20px;
     padding: 15px;
+    border-collapse: collapse;
+    border: 1px solid rgb(182, 178, 178);
+    border-radius: 5px;
   }
 
   .inputs {
@@ -80,8 +121,14 @@ body {
   .inputs input {
     width: 100%;
     height: auto;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 5px;
   }
 
+  #phone-book-table {
+    width: 90%;
+  }
   .btn {
     width: 100%;
   }

@@ -115,10 +115,10 @@ function handleTableActions(e) {
     e.target.parentElement.parentElement.remove();
   } else if (e.target.classList.contains("fa-pen-to-square")) {
     tableRowToBeEdited = e.target.parentElement.parentElement;
-    const name = tableRowToBeEdited.querySelector("td:nth-child(1)").innerHtml;
+    const name = tableRowToBeEdited.querySelector("td:nth-child(1)").innerHTML;
     console.log(name);
     const phoneNumber =
-      tableRowToBeEdited.querySelector("td:nth-child(2)").innerHtml;
+      tableRowToBeEdited.querySelector("td:nth-child(2)").innerHTML;
     console.log(phoneNumber);
 
     nameInputElement.value = name;
@@ -141,8 +141,8 @@ function editContact() {
     return;
   }
 
-  tableRowToBeEdited.querySelector("td:nth-child(1)").innerHtml = name;
-  tableRowToBeEdited.querySelector("td:nth-child(2)").innerHtml = phoneNumber;
+  tableRowToBeEdited.querySelector("td:nth-child(1)").innerHTML = name;
+  tableRowToBeEdited.querySelector("td:nth-child(2)").innerHTML = phoneNumber;
 
   addOrEditContactButton.innerHTML = "Add contact";
   addOrEditContactButton.classList.remove("edit-contact-btn");
